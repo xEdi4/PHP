@@ -69,12 +69,9 @@ function generarImagenes(array $tdados) {
 
 $dadosJugador1 = generarDados(NUMDADOS);
 $dadosJugador2 = generarDados(NUMDADOS);
-$dadosJugador3 = generarDados(NUMDADOS);
 $puntosJugado1 = calcularPuntos($dadosJugador1);
 $puntosJugado2 = calcularPuntos($dadosJugador2);
-$puntosJugado3 = calcularPuntos($dadosJugador3);
-
-$msgGanador    = generarMensajeGanadorvar($puntosJugado1, $puntosJugado2, $puntosJugado3);
+$msgGanador    = generarMensajeGanadorvar($puntosJugado1, $puntosJugado2);
 
 ?>
 <!DOCTYPE html>
@@ -112,14 +109,6 @@ $msgGanador    = generarMensajeGanadorvar($puntosJugado1, $puntosJugado2, $punto
 
                 </td>
                 <th> <?= $puntosJugado2 ?> puntos</th>
-            </tr>
-            <tr>
-                <th>Jugador 3</th>
-                <td style="padding: 10px; background-color: green;">
-                    <?= generarImagenes($dadosJugador3); ?>
-
-                </td>
-                <th> <?= $puntosJugado3 ?> puntos</th>
             </tr>
             <tr>
                 <th>Resultado</th>
